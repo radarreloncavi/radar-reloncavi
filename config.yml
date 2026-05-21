@@ -1,0 +1,93 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "contenido"
+    label: "Contenido del sitio"
+    files:
+      - name: "portada"
+        label: "Portada y noticias"
+        file: "data/noticias.json"
+        format: "json"
+        fields:
+          - label: "Configuración del sitio"
+            name: "sitio"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Nombre del medio", name: "nombre", widget: "string", default: "Radar Reloncaví" }
+              - { label: "Bajada", name: "bajada", widget: "string", default: "Noticias útiles del territorio" }
+              - { label: "Link de Facebook", name: "facebook", widget: "string", default: "https://web.facebook.com/radarreloncavi" }
+
+          - label: "Franja superior"
+            name: "franja"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Etiqueta", name: "etiqueta", widget: "string", default: "En desarrollo" }
+              - { label: "Texto", name: "texto", widget: "text", default: "Información local verificada para la comunidad." }
+
+          - label: "Noticia principal"
+            name: "principal"
+            widget: "object"
+            collapsed: false
+            fields:
+              - label: "Categoría"
+                name: "categoria"
+                widget: "select"
+                options: ["Local · Urgente", "Emergencia", "Rutas", "Servicios", "Comunidad", "Trabajo", "Deporte local", "Clima", "Actualidad"]
+                default: "Local · Urgente"
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Resumen", name: "resumen", widget: "text" }
+              - { label: "Comuna o zona", name: "comuna", widget: "string" }
+              - { label: "Fuente", name: "fuente", widget: "string" }
+              - label: "Nivel de relevancia"
+                name: "relevancia"
+                widget: "select"
+                options: ["Alta", "Media", "Baja", "Alta / Media", "Media / Alta"]
+                default: "Alta"
+              - { label: "Fecha / hora", name: "fecha", widget: "string", default: "Actualizar fecha y hora" }
+              - { label: "Autor", name: "autor", widget: "string", default: "Redacción Radar Reloncaví" }
+              - { label: "Imagen", name: "imagen", widget: "image", required: false }
+              - { label: "¿Mostrar como urgente?", name: "urgente", widget: "boolean", default: true, required: false }
+
+          - label: "Noticias secundarias"
+            name: "noticias"
+            widget: "list"
+            collapsed: true
+            summary: "{{fields.categoria}} · {{fields.titulo}}"
+            fields:
+              - label: "Categoría"
+                name: "categoria"
+                widget: "select"
+                options: ["Emergencia", "Rutas", "Servicios", "Comunidad", "Trabajo", "Deporte local", "Clima", "Actualidad"]
+                default: "Actualidad"
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Resumen", name: "resumen", widget: "text" }
+              - { label: "Comuna o zona", name: "comuna", widget: "string" }
+              - { label: "Fuente", name: "fuente", widget: "string" }
+              - label: "Nivel de relevancia"
+                name: "relevancia"
+                widget: "select"
+                options: ["Alta", "Media", "Baja", "Alta / Media", "Media / Alta"]
+                default: "Media"
+              - { label: "Fecha / hora", name: "fecha", widget: "string", default: "Actualizar hora" }
+              - { label: "Imagen", name: "imagen", widget: "image", required: false }
+              - { label: "Texto listo para Facebook", name: "texto_facebook", widget: "text", required: false }
+              - { label: "Hashtags", name: "hashtags", widget: "string", required: false, default: "#RadarReloncaví #InformaciónLocal" }
+              - { label: "Plantilla visual recomendada", name: "plantilla_visual", widget: "text", required: false }
+
+          - label: "Tendencias locales"
+            name: "tendencias"
+            widget: "list"
+            collapsed: true
+            summary: "{{fields.texto}}"
+            fields:
+              - { label: "Etiqueta", name: "texto", widget: "string", default: "#PuertoMontt" }
+              - { label: "Tipo", name: "tipo", widget: "string", default: "local" }

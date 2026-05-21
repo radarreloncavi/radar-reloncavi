@@ -1,0 +1,84 @@
+{
+  "sitio": {
+    "nombre": "Radar Reloncaví",
+    "bajada": "Noticias útiles del territorio",
+    "facebook": "https://web.facebook.com/radarreloncavi"
+  },
+  "franja": {
+    "etiqueta": "Modo demo",
+    "texto": "Portada administrable: entra a /admin para crear, editar o actualizar noticias cuando esté conectado a Netlify + Git Gateway."
+  },
+  "principal": {
+    "categoria": "Local · Urgente",
+    "titulo": "Portada preparada para la noticia más importante del día",
+    "resumen": "Este espacio debe usarse para alertas reales, cortes de ruta, emergencias, clima severo, servicios básicos o hechos de alta relevancia para Puerto Montt, Alerce y comunas cercanas.",
+    "comuna": "Puerto Montt",
+    "fuente": "Institución o reporte verificado",
+    "relevancia": "Alta",
+    "fecha": "Actualizar fecha y hora",
+    "autor": "Redacción Radar Reloncaví",
+    "imagen": "",
+    "urgente": true
+  },
+  "noticias": [
+    {
+      "categoria": "Emergencia",
+      "titulo": "Plantilla para alerta local confirmada",
+      "resumen": "Usa esta tarjeta para cortes de ruta, incendios, accidentes, búsqueda oficial, corte de suministro o alerta climática con fuente verificada.",
+      "comuna": "Comuna o sector",
+      "fuente": "Fuente oficial / institución",
+      "relevancia": "Alta",
+      "fecha": "Actualizar hora",
+      "imagen": "",
+      "texto_facebook": "Información en desarrollo. Actualizaremos cuando exista nuevo reporte oficial.",
+      "hashtags": "#RadarReloncaví #InformaciónLocal",
+      "plantilla_visual": "Alerta clara: fondo claro, franja naranjo/coral, comuna grande y fuente visible."
+    },
+    {
+      "categoria": "Rutas",
+      "titulo": "Estado de caminos, desvíos o transporte",
+      "resumen": "Formato para informar trabajos en ruta, congestión, barcazas, desvíos, conectividad rural o cambios importantes para la movilidad diaria.",
+      "comuna": "Ruta o sector",
+      "fuente": "MOP / Transporte / Municipio",
+      "relevancia": "Alta / Media",
+      "fecha": "Actualizar hora",
+      "imagen": "",
+      "texto_facebook": "Atención conductores: revisar estado de ruta antes de salir y preferir información oficial.",
+      "hashtags": "#RadarReloncaví #Rutas #PuertoMontt",
+      "plantilla_visual": "Mapa simple + ícono de ruta + hora de actualización."
+    },
+    {
+      "categoria": "Comunidad",
+      "titulo": "Actividad vecinal, feria o campaña local",
+      "resumen": "Publica actividades barriales, operativos, ferias, beneficios, comercio local, campañas solidarias y datos útiles para la comunidad.",
+      "comuna": "Barrio o comuna",
+      "fuente": "Organización identificada",
+      "relevancia": "Media",
+      "fecha": "Actualizar hora",
+      "imagen": "",
+      "texto_facebook": "Actividad comunitaria para vecinos y vecinas del sector. Revisa fecha, horario y lugar antes de asistir.",
+      "hashtags": "#RadarReloncaví #Comunidad",
+      "plantilla_visual": "Foto comunitaria o gráfica limpia con fecha, hora y lugar."
+    },
+    {
+      "categoria": "Trabajo",
+      "titulo": "Oferta laboral u oportunidad verificable",
+      "resumen": "Incluye cargo, comuna, requisitos básicos, plazo de postulación y fuente. Evita ofertas sin empresa, sin contacto claro o poco confiables.",
+      "comuna": "Comuna",
+      "fuente": "Empresa / OMIL / SENCE",
+      "relevancia": "Media / Alta",
+      "fecha": "Actualizar hora",
+      "imagen": "",
+      "texto_facebook": "Dato laboral para la zona. Verificar requisitos, plazo y canal oficial de postulación.",
+      "hashtags": "#RadarReloncaví #Trabajo #LosLagos",
+      "plantilla_visual": "Diseño sobrio: cargo destacado, comuna, plazo y botón postula."
+    }
+  ],
+  "tendencias": [
+    { "texto": "#PuertoMontt", "tipo": "local" },
+    { "texto": "#Alerce", "tipo": "zona" },
+    { "texto": "#Rutas", "tipo": "útil" },
+    { "texto": "#ClimaLosLagos", "tipo": "alerta" },
+    { "texto": "#Comunidad", "tipo": "vecinal" }
+  ]
+}
