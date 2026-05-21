@@ -8,6 +8,16 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
+
   <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
+
+  <script>
+    CMS.init({
+      config: "/admin/config.yml"
+    });
+  </script>
 </body>
 </html>
